@@ -1,0 +1,172 @@
+.records-area {
+    max-width: 1400px;
+    margin: 50px auto 0 auto;
+    padding-bottom: 64px;
+}
+
+.accordion-btn {
+    width: 100%;
+    font-size: 2.6rem;
+    border-radius: 22px;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    font-weight: 900;
+    background: #171717;
+    border: none;
+    padding: 34px 32px 34px 32px;
+    cursor: pointer;
+    gap: 36px;
+    color: #166944;
+    box-shadow: 0 2px 12px #0001;
+    transition: background 0.2s;
+    letter-spacing: 1px;
+    text-shadow: 0 1px 10px #fff4;
+}
+
+.accordion-btn:hover {
+    background: #1d1204;
+}
+
+.accordion-title {
+    font-size: 2.6rem;
+    font-weight: 900;
+    color: #52e8b9;
+    letter-spacing: 2px;
+    flex: 1;
+    text-align: center;
+    padding-right: 36px; /* spazio per la freccia */
+}
+
+.accordion-btn .arrow {
+    font-size: 3.2rem;
+    display: inline-block;
+    transition: transform 0.2s;
+    vertical-align: middle;
+    margin-right: 20px;
+    color: #000000;
+    text-shadow: 0 2px 0 #baa300, 0 1px 10px #0006;
+}
+
+.accordion-btn.open .arrow {
+    transform: rotate(180deg);
+}
+
+.accordion-content {
+    margin-top: 38px;
+}
+
+.record-card {
+    background: #000000;
+    border-radius: 28px;
+    padding: 38px 42px;
+    margin-bottom: 42px;
+    box-shadow: 0 4px 18px #0002;
+    font-size: 1.28rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 44px;
+    transition: box-shadow 0.2s;
+}
+
+.record-card:hover {
+    box-shadow: 0 8px 32px #0003;
+}
+
+.record-info {
+    flex: 1 1 420px;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.record-date {
+    color: #d3d3d3;
+    font-size: 1.19rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+    letter-spacing: 0.5px;
+}
+.record-title {
+    color: #49f5a7;
+    font-size: 1.75rem;
+    font-weight: 900;
+    margin-bottom: 6px;
+    letter-spacing: 1px;
+}
+.record-desc {
+    color: #ffffff;
+    font-size: 1.22rem;
+    line-height: 1.48;
+    font-weight: 600;
+}
+
+.record-iframewrap {
+    flex: 0 0 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #131313;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px #0002;
+    padding: 12px;
+}
+
+.record-iframewrap iframe {
+    border-radius: 12px;
+    border: none;
+    width: 460px;
+    height: 270px;
+    box-shadow: 0 2px 16px #0002;
+}
+
+/* --- Responsive --- */
+@media (max-width: 1300px) {
+    .record-iframewrap,
+    .record-iframewrap iframe {
+        width: 340px !important;
+        min-width: 0 !important;
+        height: 192px !important;
+    }
+}
+@media (max-width: 900px) {
+    .accordion-btn {
+        font-size: 1.4rem;
+        padding: 18px 10px;
+    }
+    .accordion-title {
+        font-size: 1.4rem;
+        padding-right: 0;
+    }
+    .record-card {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 18px;
+        font-size: 1.08rem;
+        padding: 18px 10px;
+    }
+    .record-info {
+        align-items: flex-start;
+        gap: 7px;
+    }
+    .record-title {
+        font-size: 1.15rem;
+    }
+    .record-desc {
+        font-size: 0.98rem;
+    }
+    .record-iframewrap,
+    .record-iframewrap iframe {
+        width: 100% !important;
+        min-width: 0 !important;
+        height: 190px !important;
+        padding: 0;
+    }
+}

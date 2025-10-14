@@ -1,0 +1,66 @@
+.iframe-thumb-card {
+  width: 320px;                 /* base, puoi ridurre se vuoi più piccolo */
+  max-width: 98vw;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #0004;
+  background: #000;
+  margin: 0 10px 22px 10px;
+  cursor: pointer;
+  overflow: hidden;             /* niente sbordi! */
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.18s;
+}
+.iframe-thumb-card:hover {
+  box-shadow: 0 8px 28px #0007;
+}
+
+/* Cornice video thumb */
+.iframe-thumb-outer {
+  width: 100%;
+  background: #000;
+}
+
+.iframe-thumb-frame {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  min-height: 90px;
+  border: none;
+  display: block;
+  background: #000;
+}
+
+/* Header identico come stile, arrotondato solo sotto */
+.iframe-thumb-header {
+  width: 100%;
+  background-color: #422815;
+  border-radius: 0 0 10px 10px;
+  padding: 10px 10px 7px 10px;
+  text-align: center;
+  font-family: 'Roboto', Sans-serif;
+}
+
+.iframe-thumb-title {
+  color: #fff;
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 3px;
+  text-shadow: 0 2px 0 #3a2412, 0 1px 6px #0008;
+}
+
+.iframe-thumb-desc {
+  color: #EFB800;
+  font-size: 1rem;
+  font-weight: 600;
+  text-shadow: 0 1px 4px #312116;
+}
+
+/* Responsive: più piccoli su mobile */
+@media (max-width: 700px) {
+  .iframe-thumb-card, .iframe-thumb-outer, .iframe-thumb-header {
+    width: 95vw !important;
+    min-width: 0;
+    border-radius: 0 !important;
+  }
+  .iframe-thumb-frame { min-height: 50px; }
+}

@@ -14,7 +14,7 @@
     justify-content: center;
     box-sizing: border-box;
     font-weight: 900;
-    background: #171717;
+    background: #eaeaea;
     border: none;
     padding: 34px 32px 34px 32px;
     cursor: pointer;
@@ -27,7 +27,7 @@
 }
 
 .accordion-btn:hover {
-    background: #1d1204;
+    background: #e6f7d2;
 }
 
 .accordion-title {
@@ -127,46 +127,69 @@
     box-shadow: 0 2px 16px #0002;
 }
 
-/* --- Responsive --- */
-@media (max-width: 1300px) {
-    .record-iframewrap,
-    .record-iframewrap iframe {
-        width: 340px !important;
-        min-width: 0 !important;
-        height: 192px !important;
-    }
-}
+
 @media (max-width: 900px) {
     .accordion-btn {
         font-size: 1.4rem;
         padding: 18px 10px;
     }
+
     .accordion-title {
         font-size: 1.4rem;
         padding-right: 0;
     }
+
     .record-card {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 18px;
-        font-size: 1.08rem;
-        padding: 18px 10px;
-    }
-    .record-info {
-        align-items: flex-start;
-        gap: 7px;
-    }
-    .record-title {
-        font-size: 1.15rem;
-    }
-    .record-desc {
-        font-size: 0.98rem;
-    }
-    .record-iframewrap,
-    .record-iframewrap iframe {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px; 
+    font-size: 1.08rem;
+    padding: 14px 10px; 
+  }
+
+  .record-info {
+    flex: 0 0 auto; 
+    gap: 4px;      
+    padding: 0;     
+    margin: 0;
+  }
+
+  .record-date {
+    font-size: 0.9rem;
+    margin-bottom: 2px;
+  }
+
+  .record-title {
+    font-size: 1.1rem;
+    line-height: 1.2;
+  }
+
+  .record-desc {
+    font-size: 0.95rem;
+    line-height: 1.3;
+  }
+
+    /* --- FIX chiave per il video --- */
+    .record-iframewrap {
+        flex: 1 1 100% !important; /* resetta il 0 0 480px del desktop */
         width: 100% !important;
-        min-width: 0 !important;
-        height: 190px !important;
+        max-width: 100%;
+        aspect-ratio: 16 / 9;
+        background: #1b1b1b;
+        border-radius: 16px;
+        box-shadow: 0 4px 24px #0002;
         padding: 0;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .record-iframewrap iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+        border-radius: 0;
+        display: block;
     }
 }

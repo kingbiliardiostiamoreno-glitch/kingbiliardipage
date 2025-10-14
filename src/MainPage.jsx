@@ -18,7 +18,7 @@ export default function MainPage() {
         Records: []
     });
     const [bigScreen, setBigScreen] = useState(null);
-
+// eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(() => {
        const dataRef = ref(db, "multistream");
         const unsubscribe = onValue(dataRef, (snapshot) => {
@@ -98,3 +98,4 @@ export default function MainPage() {
         </div>
     );
 }
+

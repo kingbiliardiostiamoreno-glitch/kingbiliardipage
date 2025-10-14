@@ -14,7 +14,7 @@
     justify-content: center;
     box-sizing: border-box;
     font-weight: 900;
-    background: #eaeaea;
+    background: #171717;
     border: none;
     padding: 34px 32px 34px 32px;
     cursor: pointer;
@@ -193,3 +193,4 @@
         display: block;
     }
 }
+

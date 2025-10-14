@@ -4,7 +4,7 @@ import "./RecordsAccordion.css";
 export default function RecordsAccordion({ records }) {
     const [open, setOpen] = useState(false);
     const [page, setPage] = useState(0);
-    const itemsPerPage = 10;
+    const itemsPerPage = 2;
     const containerRef = useRef(null);
 
     // Effetto: torna in cima quando cambi pagina
@@ -48,7 +48,7 @@ export default function RecordsAccordion({ records }) {
                 <button
                     onClick={prevPage}
                     style={{
-                        background: "#166944",
+                        background: "#3a7a37",
                         color: "#fff",
                         border: "none",
                         borderRadius: "50%",
@@ -70,7 +70,7 @@ export default function RecordsAccordion({ records }) {
                 style={{
                     fontSize: "1.3rem",
                     fontWeight: "700",
-                    color: "#166944",
+                    color: "#a3ffe2ff",
                     textShadow: "0 1px 6px #0002",
                 }}
             >
@@ -81,7 +81,7 @@ export default function RecordsAccordion({ records }) {
                 <button
                     onClick={nextPage}
                     style={{
-                        background: "#166944",
+                        background: "#3a7a37",
                         color: "#fff",
                         border: "none",
                         borderRadius: "50%",

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import './MainPage.css';
 import IframeThumb from "./IframeThumb";
 import IframeBig from "./IframeBig";
-import { firebasedb } from "./firebase";
+import { db } from "./firebase";
 import { ref, onValue, off } from "firebase/database";
 import RecordsAccordion from "./RecordsAccordion";
 
@@ -20,7 +20,7 @@ export default function MainPage() {
     const [bigScreen, setBigScreen] = useState(null);
 
     useEffect(() => {
-        const dataRef = ref(firebasedb, "multistream");
+       const dataRef = ref(db, "multistream");
         const unsubscribe = onValue(dataRef, (snapshot) => {
             const data = snapshot.val() || {};
             setUserData({

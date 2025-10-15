@@ -4,7 +4,7 @@ import "./RecordsAccordion.css";
 export default function RecordsAccordion({ records }) {
     const [open, setOpen] = useState(false);
     const [page, setPage] = useState(0);
-    const itemsPerPage = 2;
+    const itemsPerPage = 10;
     const containerRef = useRef(null);
 
     // Effetto: torna in cima quando cambi pagina
@@ -173,3 +173,4 @@ export default function RecordsAccordion({ records }) {
         </div>
     );
 }
+

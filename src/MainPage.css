@@ -73,6 +73,9 @@ body, .main-bg {
     color: #ffffff;
     font-weight: 600;
     line-height: 1.4;
+    word-break: break-word;
+    overflow-wrap: break-word;   
+    white-space: normal;
 }
 
 .main-center {
@@ -168,3 +171,4 @@ body, .main-bg {
     .right-panel { order: 2; align-items: flex-end; text-align: right; }
     .main-center { order: 3; }
 }
+
